@@ -1,0 +1,91 @@
+.info {
+  display: flex;
+  gap: 65px;
+}
+
+.info__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 87px;
+  padding-bottom: 43px;
+  padding-left: 19px;
+}
+
+.info p {
+  margin: 0;
+  padding-right: 49px;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  text-transform: lowercase;
+  color: $color-default-white;
+}
+
+.info__wrapper {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 34px;
+}
+
+.info__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-right: 17px;
+  padding: 0;
+  padding-bottom: 36px;
+  text-align: right;
+  list-style-type: none;
+}
+
+.info__item {
+  font-family: $ff-roboto;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-default-white;
+}
+
+.info h2 {
+  margin: 0;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 92px;
+  line-height: 110px;
+  text-align: right;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  -webkit-text-stroke: 3px $color-default-white;
+}
+
+.info__button {
+  width: 234px;
+  margin-right: -2px;
+  min-height: 61px;
+  padding: 19px;
+  font-family: $ff-roboto;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  border: 4px solid $color-default-white;
+}
+
+.info__image-wrapper {
+  width: 500px;
+  height: 556px;
+  margin-top: -23px;
+}
+
+.info__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
