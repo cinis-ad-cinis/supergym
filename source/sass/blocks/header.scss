@@ -1,15 +1,37 @@
 .header {
   background: $conic-desktop;
+
+  @include vp-1199 {
+    background: $conic-tablet;
+  }
+
+  @include vp-767 {
+    background: $conic-mobile;
+  }
 }
 
 .header__container {
   padding-top: 30px;
   padding-bottom: 51px;
+
+  @include vp-1199 {
+    padding-top: 34px;
+    padding-bottom: 82px;
+  }
+
+  @include vp-767 {
+    padding-top: 15px;
+    padding-bottom: 78px;
+  }
 }
 
 .header__wrapper {
   display: flex;
   justify-content: space-between;
+
+  @include vp-1199 {
+    padding-bottom: 19px;
+  }
 }
 
 .header__link {
@@ -19,4 +41,17 @@
   line-height: 31px;
   letter-spacing: 0.03em;
   color: $color-default-white;
+
+  @include vp-1199 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+  }
+
+  @include vp-767 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }

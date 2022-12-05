@@ -1,6 +1,18 @@
 .info {
   display: flex;
   gap: 65px;
+
+  @include vp-1199 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.4%;
+  }
+
+  @include vp-767 {
+    // display: flex;
+    // flex-direction: column;
+    grid-template-columns: 1fr;
+  }
 }
 
 .info__description {
@@ -11,10 +23,24 @@
   padding-top: 87px;
   padding-bottom: 43px;
   padding-left: 19px;
+
+  @include vp-1199 {
+    width: 100%;
+    max-width: 450px;
+    padding-top: 50px;
+    padding-bottom: 23px;
+    padding-left: 0;
+  }
+
+  @include vp-767 {
+    padding-bottom: 0;
+    max-width: none;
+  }
 }
 
 .info p {
   margin: 0;
+  margin-bottom: 15px;
   padding-right: 49px;
   font-family: $ff-alumni;
   font-weight: 600;
@@ -23,12 +49,36 @@
   letter-spacing: 0.03em;
   text-transform: lowercase;
   color: $color-default-white;
+
+  @include vp-1199 {
+    margin-bottom: 7px;
+    padding-right: 4px;
+    font-size: 34px;
+    line-height: 41px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 13px;
+    margin-right: 4px;
+    padding-right: calc((50% - 250px));
+    font-size: 28px;
+    line-height: 34px;
+  }
 }
 
 .info__wrapper {
   display: flex;
   align-items: flex-end;
-  margin-bottom: 34px;
+
+  @include vp-1199 {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    margin: 0 auto 23px;
+    max-width: 500px;
+  }
 }
 
 .info__list {
@@ -40,6 +90,16 @@
   padding-bottom: 36px;
   text-align: right;
   list-style-type: none;
+
+  @include vp-1199 {
+    margin-right: 0;
+    padding-bottom: 20px;
+  }
+
+  @include vp-767 {
+    margin-right: -15px;
+    padding-bottom: 30px;
+  }
 }
 
 .info__item {
@@ -60,12 +120,19 @@
   text-transform: uppercase;
   color: $color-default-white;
   -webkit-text-stroke: 3px $color-default-white;
+
+  @include vp-1199 {
+    font-size: 72px;
+    line-height: 86px;
+    text-transform: none;
+  }
 }
 
 .info__button {
   width: 234px;
   margin-right: -2px;
   min-height: 61px;
+  margin-top: auto;
   padding: 19px;
   font-family: $ff-roboto;
   font-weight: 700;
@@ -76,12 +143,35 @@
   text-transform: uppercase;
   color: $color-default-white;
   border: 4px solid $color-default-white;
+  user-select: none;
+
+  @include vp-1199 {
+    width: 187px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-height: 63px;
+    margin-top: auto;
+    margin-right: 0;
+  }
 }
 
 .info__image-wrapper {
   width: 500px;
   height: 556px;
   margin-top: -23px;
+
+  @include vp-1199 {
+    width: 100%;
+    max-width: 400px;
+    height: 390px;
+    margin-top: 0;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .info__image {
