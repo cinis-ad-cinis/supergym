@@ -35,12 +35,19 @@
 }
 
 .header__link {
+  position: relative;
   font-family: $ff-alumni;
   font-weight: 600;
   font-size: 26px;
   line-height: 31px;
   letter-spacing: 0.03em;
   color: $color-default-white;
+  align-self: flex-start;
+  transition: transform $trans-default;
+
+  @include hover-focus {
+    transform: scale(1.1);
+  }
 
   @include vp-1199 {
     font-weight: 700;

@@ -1,0 +1,73 @@
+.about {
+  padding: 120px 0;
+
+  @include vp-1199 {
+    padding: 100px 0;
+  }
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: 355px 1fr;
+  gap: 85px;
+  padding-left: 80px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    gap: 43px;
+  }
+}
+
+.about__description {
+  padding-top: 39px;
+
+  @include vp-1199 {
+    padding-top: 0;
+    text-align: center;
+  }
+}
+
+.about h2 {
+  margin: 0;
+  margin-bottom: 7px;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin-left: -15px;
+    margin-bottom: 0;
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+
+.about p {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: $ff-roboto;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.about__text p {
+  margin: 0;
+  margin-bottom: 8px;
+  font-family: $ff-roboto;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.about__media {
+  position: relative;
+}
+
+.about__video {
+  position: absolute;
+  bottom: 0;
+  left: -63px;
+  transform: translateY(50%);
+}

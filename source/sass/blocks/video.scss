@@ -1,0 +1,61 @@
+.video {
+  width: 364px;
+  height: 228px;
+}
+
+.video__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $color-dark-cerulean-opacity;
+  z-index: 1;
+}
+
+// .video__button {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   z-index: 1;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 72px;
+//   height: 72px;
+//   padding: 14px;
+//   border-radius: 50%;
+//   border: none;
+//   background: $blue-to-red;
+//   cursor: pointer;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     width: 17px;
+//     height: 17px;
+//     background-image: url("../img/sprite/button-play.svg");
+//     background-repeat: no-repeat;
+//     background-position: right;
+//   }
+// }
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/svg/video-button.svg");
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
