@@ -966,7 +966,7 @@ button,
 }
 
 .about {
-  padding: 120px 0;
+  padding: 120px 0 235px;
 }
 
 .about__container {
@@ -1013,6 +1013,26 @@ button,
   position: relative;
 }
 
+.about__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 60.7%;
+}
+
+.about__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #b6bdcc;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .about__video {
   position: absolute;
   bottom: 0;
@@ -1027,12 +1047,28 @@ button,
   height: 228px;
 }
 
+.video.focus-visible:focus .video__button {
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+  -ms-transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
 .video__overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(20, 54, 122, 0.5);
   z-index: 1;
+}
+
+.video__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .video__button {
@@ -1050,9 +1086,22 @@ button,
   background-color: transparent;
   background-image: url("../img/svg/video-button.svg");
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.video__button.focus-visible:focus {
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+  -ms-transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 /* @mixin hover-focus {
@@ -1179,7 +1228,7 @@ button,
   }
 
   .about {
-    padding: 100px 0;
+    padding: 100px 0 183px;
   }
 
   .about__container {
@@ -1198,6 +1247,54 @@ button,
     margin-bottom: 0;
     font-size: 42px;
     line-height: 50px;
+  }
+
+  .about p {
+    margin-bottom: 35px;
+  }
+
+  .about__text {
+    max-width: 510px;
+    margin: 0 auto;
+  }
+
+  .about__text p {
+    margin-bottom: 0;
+  }
+
+  .about__text p:last-child {
+    display: none;
+  }
+
+  .about__image-wrapper {
+    max-height: 100%;
+    height: 345px;
+    padding-bottom: 50.8%;
+  }
+
+  .about__image {
+    -o-object-position: top;
+    object-position: top;
+  }
+
+  .about__video {
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+  }
+
+  .video {
+    min-width: 266px;
+    width: 39%;
+    height: 167px;
+    max-height: 100%;
+    padding-bottom: 24%;
+  }
+
+  .video__button {
+    width: 73px;
+    height: 73px;
   }
 }
 
@@ -1277,6 +1374,68 @@ button,
   .info__image-wrapper {
     display: none;
   }
+
+  .about {
+    padding: 63px 0 70px;
+  }
+
+  .about__container {
+    gap: 33px;
+    padding: 0;
+  }
+
+  .about__description {
+    padding: 0 15px;
+    text-align: start;
+  }
+
+  .about h2 {
+    margin-left: 0;
+    margin-bottom: 5px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .about p {
+    margin-bottom: 25px;
+  }
+
+  .about__text {
+    padding-right: 30px;
+    margin: 0;
+  }
+
+  .about__text p {
+    margin-bottom: 0;
+  }
+
+  .about__image-wrapper {
+    height: 313px;
+    margin-bottom: 40px;
+  }
+
+  .about__image {
+    -o-object-position: 90%;
+    object-position: 90%;
+  }
+
+  .about__video {
+    position: relative;
+    left: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+
+  .video {
+    width: 100%;
+    padding-bottom: 52.2%;
+  }
+
+  .video__cover {
+    -o-object-position: top;
+    object-position: top;
+  }
 }
 
 @media (hover: hover) {
@@ -1293,5 +1452,17 @@ button,
   .info__button:hover:not(.focus-visible) {
     color: #102654;
     background-color: #ffffff;
+  }
+
+  .video:hover:not(.focus-visible) .video__button {
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+    -ms-transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .video__button:hover:not(.focus-visible) {
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+    -ms-transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
   }
 }

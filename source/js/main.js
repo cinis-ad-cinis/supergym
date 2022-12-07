@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  setupVideo(vid);
 
   // Modules
   // ---------------------------------
@@ -19,6 +20,47 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
   });
 });
+
+const vid = document.querySelector('.video');
+
+// Video
+
+const setupVideo = (video) => {
+  let link = video.querySelector('.video__link');
+  let button = video.querySelector('.video__button');
+
+  video.addEventListener('click', () => {
+    let iframe = createIframe();
+
+    link.remove();
+    button.remove();
+    video.appendChild(iframe);
+  });
+
+  link.removeAttribute('href');
+};
+
+const createIframe = () => {
+  let iframe = document.createElement('iframe');
+
+  iframe.setAttribute('allowfullscreen', '');
+  iframe.setAttribute('allow', 'autoplay');
+  iframe.setAttribute('src', generateURL());
+  iframe.setAttribute('frameborder', '0');
+  iframe.setAttribute('width', '364px');
+  iframe.setAttribute('height', '228px');
+  iframe.classList.add('video__cover');
+
+  return iframe;
+};
+
+const generateURL = () => {
+  let id = vid.getAttribute('data-id');
+  let query = '?rel=0&showinfo=0&autoplay=1';
+
+  return 'https://www.youtube.com/embed/' + id + query;
+};
+
 
 // ---------------------------------
 
