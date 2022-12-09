@@ -386,6 +386,14 @@ template {
 
 @font-face {
   font-style: normal;
+  font-weight: 400;
+  font-family: "Rouble";
+  font-display: swap;
+  src: url("../fonts/rouble.woff2") format("woff2"), url("../fonts/rouble.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
   font-weight: 300;
   font-family: "Roboto Condensed";
   font-display: swap;
@@ -1104,6 +1112,208 @@ button,
   transform: translate(-50%, -50%) scale(1.1);
 }
 
+.membership {
+  position: relative;
+  background-color: #f8f9fc;
+}
+
+.membership::after {
+  content: url("../img/weights.png");
+  position: absolute;
+  right: 0;
+  bottom: -158px;
+  z-index: 1;
+}
+
+.membership__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.membership h2 {
+  margin-top: 0;
+  margin-bottom: 17px;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+}
+
+.membership__buttons {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 46px;
+  margin-bottom: 51px;
+}
+
+.membership__buttons::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -13px;
+  height: 2px;
+  background-color: rgba(120, 120, 120, 0.2);
+}
+
+.membership__button {
+  position: relative;
+  padding: 0;
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(16, 38, 84, 0.5);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.membership__button--active {
+  color: #102654;
+}
+
+.membership__button--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -13px;
+  height: 2px;
+  background-color: #d10a42;
+}
+
+.membership__list {
+  position: relative;
+  display: none;
+  margin: 0;
+  padding: 0;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  list-style-type: none;
+  z-index: 2;
+}
+
+.membership__list--active {
+  display: -ms-grid;
+  display: grid;
+}
+
+.tab-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 56px 70px 61px;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 7px solid transparent;
+}
+
+.tab-card:hover {
+  -o-border-image: -o-linear-gradient(301.18deg, #d10a42 0.85%, #00359f 100%);
+  border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+  border-image-slice: 1;
+}
+
+.tab-card h3 {
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-size: 26px;
+  line-height: 29px;
+}
+
+.tab-card span {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 84px;
+}
+
+.tab-card__price {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.tab-card__price b {
+  position: absolute;
+  bottom: -25px;
+  left: -20px;
+  font-size: 100px;
+  line-height: 150px;
+  color: #e8e8e8;
+  opacity: 0.48;
+}
+
+.tab-card__price p {
+  position: relative;
+  margin: 0;
+  padding-right: 44px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 56px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  color: #103aae;
+}
+
+.tab-card__price p::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 42px;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-image: url("../img/svg/rouble.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.tab-card__button {
+  width: 206px;
+  padding: 24px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid #102654;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tab-card__button.focus-visible:focus {
+  color: #ffffff;
+  padding: 26px;
+  border: none;
+  background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1296,6 +1506,43 @@ button,
     width: 73px;
     height: 73px;
   }
+
+  .membership::after {
+    content: url("../../img/weights-tablet.png");
+    bottom: -130px;
+  }
+
+  .membership__container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .membership h2 {
+    margin-bottom: 19px;
+    margin-left: -13px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .membership__buttons {
+    gap: 54px;
+    margin-bottom: 58px;
+  }
+
+  .membership__button {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .membership__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .tab-card {
+    padding-right: 111px;
+    padding-left: 111px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1436,6 +1683,94 @@ button,
     -o-object-position: top;
     object-position: top;
   }
+
+  .membership::after {
+    display: none;
+  }
+
+  .membership__container {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    padding-top: 63px;
+    padding-bottom: 70px;
+  }
+
+  .membership h2 {
+    text-align: center;
+    margin-bottom: 21px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .membership__buttons {
+    gap: 45px;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 49px;
+  }
+
+  .membership__buttons::after {
+    bottom: -14px;
+  }
+
+  .membership__button--active::after {
+    bottom: -14px;
+  }
+
+  .membership__button {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .membership__list {
+    margin: 0 auto;
+    width: 100%;
+    gap: 35px;
+  }
+
+  .tab-card {
+    width: 100%;
+    padding: 43px 35px 47px;
+  }
+
+  .tab-card h3 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .tab-card span {
+    margin-bottom: 55px;
+  }
+
+  .tab-card__price {
+    margin-bottom: 30px;
+  }
+
+  .tab-card__price b {
+    bottom: -8px;
+    left: -16px;
+    font-size: 80px;
+    line-height: 120px;
+  }
+
+  .tab-card__price p {
+    padding-right: 34px;
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  .tab-card__price p::after {
+    width: 24px;
+    height: 33px;
+  }
+
+  .tab-card__button {
+    min-width: 206px;
+    width: 100%;
+  }
 }
 
 @media (hover: hover) {
@@ -1464,5 +1799,13 @@ button,
     -webkit-transform: translate(-50%, -50%) scale(1.1);
     -ms-transform: translate(-50%, -50%) scale(1.1);
     transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .tab-card__button:hover:not(.focus-visible) {
+    color: #ffffff;
+    padding: 26px;
+    border: none;
+    background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   }
 }
