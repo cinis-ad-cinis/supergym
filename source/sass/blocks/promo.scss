@@ -1,0 +1,199 @@
+.promo__container {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  padding-top: 120px;
+  padding-bottom: 106px;
+
+  @include vp-1199 {
+    grid-template-columns: 0.75fr 1fr;
+    // grid-template-columns: 292px 1fr;
+    //ВЫБРАТЬ С КОМАНДОЙ ЛУЧШИЙ ВАРИАНТ ОТОБРАЖЕНИЯ
+    padding-top: 97px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    padding-top: 70px;
+    padding-bottom: 63px;
+  }
+}
+
+.promo__description {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 78px 86px;
+  background-color: $color-torch-red;
+
+  @include vp-1199 {
+    padding: 47px 45px 51px;
+  }
+}
+
+.promo__description p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.promo__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  @include vp-1199 {
+    margin-bottom: 2px;
+  }
+}
+
+.promo h2 {
+  margin: 0;
+  margin-top: 5px;
+  padding-left: 13px;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 82px;
+  line-height: 79px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    margin-top: 4px;
+    padding-left: 7px;
+    font-size: 48px;
+    line-height: 46px;
+  }
+}
+
+.promo__date {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include vp-1199 {
+    gap: 0;
+  }
+}
+
+.promo__day,
+.promo__time {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.promo__date span {
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.promo__date p {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-default-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: $color-default-white;
+  }
+
+  @include vp-1199 {
+    margin-top: -2px;
+    gap: 3px;
+    font-size: 10px;
+    line-height: 15px;
+
+    &::before {
+      top: 3px;
+    }
+  }
+}
+
+.promo__date b {
+  font-size: 40px;
+  line-height: 60px;
+
+  @include vp-1199 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.promo__button {
+  width: 100%;
+  min-height: 69px;
+  margin-top: auto;
+  padding: 25px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  border: 4px solid $color-default-white;
+  user-select: none;
+  transition: background-color $trans-default;
+
+  @include hover-focus {
+    color: $color-saphire;
+    background-color: $color-default-white;
+  }
+
+  @include vp-1199 {
+    min-height: 41px;
+    padding: 12.5px;
+    font-size: 10px;
+    line-height: 12px;
+    border-width: 2px;
+  }
+
+  @include vp-767 {
+    margin-top: 30px;
+  }
+}
+
+.promo__image-wrapper {
+  position: relative;
+  padding-bottom: 75.7%;
+
+  @include vp-767 {
+    width: 100%;
+    min-height: 292px;
+  }
+}
+
+.promo__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: $color-saphire;
+
+  @include vp-767 {
+    object-position: 27%;
+  }
+}
