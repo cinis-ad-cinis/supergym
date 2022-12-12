@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+// import {addTrainersSwiper} from './modules/slider';
 
 // ---------------------------------
 
@@ -10,6 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   setupVideo(vid);
+  // addTrainersSwiper();
 
   // Modules
   // ---------------------------------
@@ -79,7 +81,6 @@ tabButtons.forEach((item) => {
     currentTab.classList.add('membership__list--active');
   });
 });
-
 
 // ---------------------------------
 
