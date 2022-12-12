@@ -2384,7 +2384,7 @@ button,
   stroke: #030a1a;
 }
 
-.trainers__button--no-js {
+.trainers__button .no-js {
   display: none;
 }
 
@@ -2404,7 +2404,7 @@ button,
   list-style-type: none;
 }
 
-.trainers__list--no-js {
+.trainers__list .no-js {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -2863,7 +2863,7 @@ button,
     text-align: center;
   }
 
-  .trainers__list--no-js {
+  .trainers__list .no-js {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
@@ -3163,7 +3163,7 @@ button,
     margin-bottom: 42px;
   }
 
-  .trainers__list--no-js {
+  .trainers__list .no-js {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }

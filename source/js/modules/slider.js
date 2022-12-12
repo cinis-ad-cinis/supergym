@@ -1,8 +1,8 @@
 import Swiper, {Navigation} from 'swiper';
 
 const swiperTrainers = document.querySelectorAll('.trainers__swiper');
-const swiperTrainersList = document.querySelector('.trainers__list');
-const swiperTrainersButtons = document.querySelectorAll('.trainers__button');
+const swiperList = document.querySelector('.swiper-wrapper');
+const swiperButtons = document.querySelectorAll('[data-swiper-button]');
 
 const addTrainersSwiper = () => {
 
@@ -44,11 +44,14 @@ const addTrainersSwiper = () => {
   swiper.init();
   const duplicates = document.querySelectorAll('.swiper-slide-duplicate');
   duplicates.forEach((el) => el.removeAttribute('tabindex'));
-
-  if (swiperTrainersButtons || swiperTrainersList) {
-    swiperTrainersButtons.forEach((el) => el.classList.remove('trainers__button--no-js'));
-    swiperTrainersList.classList.remove('trainers__list--no-js');
-  }
 };
 
-export {addTrainersSwiper};
+const removeClasses = () => {
+  if (!swiperButtons || !swiperList) {
+    return;
+  }
+  swiperButtons.forEach((el) => el.classList.remove('no-js'));
+  swiperList.classList.remove('no-js');
+};
+
+export {addTrainersSwiper, removeClasses};
