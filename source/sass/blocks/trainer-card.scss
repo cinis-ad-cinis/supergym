@@ -1,31 +1,41 @@
 .trainer-card {
   position: relative;
-  height: 294px;
-  padding-bottom: 88%;
   cursor: pointer;
 
-  &:hover .trainer-card__description {
+  &::after {
+    content: "";
+    display: block;
+    padding-bottom: 113%;
+
+    @include vp-1199 {
+      padding-bottom: 109.7%;
+    }
+
+    @include vp-767 {
+      padding-bottom: 121.2%;
+    }
+  }
+
+
+
+  &:hover .trainer-card__description,
+  &:focus .trainer-card__description {
     opacity: 1;
     background-color: $color-saphire-opacity;
   }
 
-  &:hover h3 {
+  &:hover h3,
+  &:focus h3 {
     opacity: 0;
   }
 
-  &:hover .trainer-card__image {
+  &:hover .trainer-card__image,
+  &:focus .trainer-card__image {
     transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 
-  @include vp-1199 {
-    min-height: 294px;
-    padding-bottom: 109.7%;
-  }
-
   @include vp-767 {
-    height: 274px;
     min-height: initial;
-    padding-bottom: 121.2%;
   }
 }
 
@@ -41,6 +51,11 @@
 }
 
 .trainer-card__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -58,6 +73,10 @@
   line-height: 27px;
   text-align: center;
   color: $color-default-white;
+
+  @include vp-1199 {
+    padding-left: 10px;
+  }
 }
 
 .trainer-card__description {
@@ -74,6 +93,10 @@
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+
+  @include vp-1199 {
+    padding-left: 19px;
+  }
 
   @include vp-767 {
     padding: 41px 25px;
@@ -98,6 +121,10 @@
   padding: 0;
   padding-left: 30px;
   list-style-type: none;
+
+  @include vp-1199 {
+    padding-left: 36px;
+  }
 
   @include vp-767 {
     padding-left: 9px;

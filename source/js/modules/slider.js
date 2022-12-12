@@ -1,17 +1,26 @@
 import Swiper, {Navigation} from 'swiper';
 
+const swiperTrainers = document.querySelectorAll('.trainers__swiper');
+const swiperTrainersList = document.querySelector('.trainers__list');
+const swiperTrainersButtons = document.querySelectorAll('.trainers__button');
+
 const addTrainersSwiper = () => {
-  document.querySelector('.trainers__list').classList.remove('trainers__list--no-js');
+
+  if (!swiperTrainers) {
+    return;
+  }
 
   const swiper = new Swiper('.trainers__swiper', {
     modules: [Navigation],
     direction: 'horizontal',
+    slidesPerView: 4,
+    spaceBetween: 40,
     watchOverflow: true,
-    // loop: true,
+    loop: true,
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.trainers__button--next',
+      prevEl: '.trainers__button--prev',
     },
 
     breakpoints: {
@@ -31,13 +40,15 @@ const addTrainersSwiper = () => {
         initialSlide: 0,
       },
     },
-
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-    },
   });
   swiper.init();
+  const duplicates = document.querySelectorAll('.swiper-slide-duplicate');
+  duplicates.forEach((el) => el.removeAttribute('tabindex'));
+
+  if (swiperTrainersButtons || swiperTrainersList) {
+    swiperTrainersButtons.forEach((el) => el.classList.remove('trainers__button--no-js'));
+    swiperTrainersList.classList.remove('trainers__list--no-js');
+  }
 };
 
 export {addTrainersSwiper};

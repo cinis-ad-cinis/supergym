@@ -1,22 +1,14 @@
-.trainers__swiper {
-  position: relative;
-  height: 294px;
-}
+.trainers {
+  display: flex;
+  padding: 0 45px;
 
-.trainers__button {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 16px;
-  height: 32px;
-  margin: 0;
-  color: $color-dark-gray;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+  @include vp-1199 {
+    padding: 0;
+  }
 }
 
 .trainers__container {
+  position: relative;
   padding-bottom: 91px;
 
   @include vp-1199 {
@@ -29,6 +21,74 @@
     padding-left: 47px;
     padding-right: 47px;
     padding-bottom: 70px;
+  }
+}
+
+.trainers__swiper {
+  position: relative;
+}
+
+.trainers__button {
+  position: absolute;
+  top: 52%;
+  left: -3%;
+  z-index: 1;
+  width: 18px;
+  height: 34px;
+  padding: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include vp-1199 {
+    top: 48%;
+    left: 5.86%;
+  }
+
+  @include vp-767 {
+    width: 12px;
+    height: 21px;
+    top: 51.3%;
+    left: 4.69%;
+  }
+
+  & svg {
+    stroke: $color-dark-gray;
+
+    @include vp-767 {
+      width: 12px;
+      height: 21px;
+    }
+  }
+
+  &--next {
+    right: -3%;
+    left: auto;
+
+    @include vp-1199 {
+      right: 5.85%;
+      left: auto;
+    }
+
+    @include vp-767 {
+      right: 4.69%;
+      left: auto;
+    }
+  }
+
+  &--next svg {
+    transform: rotate(180deg);
+  }
+
+  @include hover-focus {
+    & svg {
+      stroke: $color-black-russian;
+    }
+  }
+
+  &--no-js {
+    display: none;
   }
 }
 
@@ -56,8 +116,6 @@
 }
 
 .trainers__list {
-  height: 294px;
-  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
