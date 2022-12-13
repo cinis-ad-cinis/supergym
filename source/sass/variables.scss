@@ -21,6 +21,7 @@ $color-chambray:                    #495a7d;
 $color-gray-opacity:                rgba(120, 120, 120, 0.2);
 $color-spindle:                     #b6bdcc;
 $color-crimson:                     #d10a42;
+$color-crimson-opacity:             rgba(209, 10, 66, 0.2);
 $color-whisper:                     #e8e8e8;
 $color-persian-blue:                #2e35ac;
 $color-resolution-blue:             #1c3374;
@@ -39,6 +40,7 @@ $red-to-blue-right:                 linear-gradient(97.05deg, #ed0233 17.6%, #00
 $red-to-blue-diagon:                linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
 $blue-to-red:                       linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
 $red-to-blue-opacity:               linear-gradient(97.05deg, rgba(237, 2, 51, 0.2) 17.6%, rgba(0, 62, 183, 0.2) 95.31%);
+$red-to-blue-number:                linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
 $red-corner:                        linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
 
 // Typography
