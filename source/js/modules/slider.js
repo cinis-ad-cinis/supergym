@@ -1,7 +1,8 @@
 import Swiper, {Navigation} from 'swiper';
 
 const swiperTrainers = document.querySelectorAll('.trainers__swiper');
-const swiperList = document.querySelector('.swiper-wrapper');
+const swiperReviews = document.querySelectorAll('.reviews__swiper');
+const swiperLists = document.querySelectorAll('.swiper-wrapper');
 const swiperButtons = document.querySelectorAll('[data-swiper-button]');
 
 const addTrainersSwiper = () => {
@@ -13,8 +14,6 @@ const addTrainersSwiper = () => {
   const swiper = new Swiper('.trainers__swiper', {
     modules: [Navigation],
     direction: 'horizontal',
-    slidesPerView: 4,
-    spaceBetween: 40,
     watchOverflow: true,
     loop: true,
 
@@ -46,12 +45,35 @@ const addTrainersSwiper = () => {
   duplicates.forEach((el) => el.removeAttribute('tabindex'));
 };
 
-const removeClasses = () => {
-  if (!swiperButtons || !swiperList) {
+const addReviewsSwiper = () => {
+  if (!swiperReviews) {
     return;
   }
-  swiperButtons.forEach((el) => el.classList.remove('no-js'));
-  swiperList.classList.remove('no-js');
+
+  const swiper = new Swiper('.reviews__swiper', {
+    modules: [Navigation],
+    direction: 'horizontal',
+    slidesPerView: 1,
+    watchOverflow: true,
+    loop: false,
+    autoHeight: true,
+
+    navigation: {
+      nextEl: '.reviews__button--next',
+      prevEl: '.reviews__button--prev',
+    },
+
+  });
+  swiper.init();
 };
 
-export {addTrainersSwiper, removeClasses};
+const removeClasses = () => {
+  if (!swiperButtons || !swiperLists) {
+    return;
+  }
+
+  swiperButtons.forEach((el) => el.classList.remove('no-js'));
+  swiperLists.forEach((el) => el.classList.remove('no-js'));
+};
+
+export {addTrainersSwiper, addReviewsSwiper, removeClasses};

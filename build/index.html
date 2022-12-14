@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Supergym - фитнес-центр в Омске">
     <title>Supergym - фитнес-центр в Омске</title>
     <link rel="preload" href="fonts/alumnisans-bold.woff2" as="font" crossorigin="anonymous">
@@ -82,10 +82,10 @@
                     <source type="image/webp" srcset="./img/about-video.webp 1x, ./img/about-video@2x.webp 2x">
                     <img class="video__cover" src="./img/about-video.jpg" srcset="./img/about-video@2x.jpg" width="364" height="228" alt="Обложка для видео с фотографией тренажерного зала.">
                   </picture>
-                  <button class="video__button" type="button">
-                    <span class="visually-hidden">Воспроизвести видео.</span>
-                  </button>
                 </a>
+                <button class="video__button" type="button">
+                  <span class="visually-hidden">Воспроизвести видео.</span>
+                </button>
               </div>
             </div>
           </div>
@@ -223,7 +223,7 @@
           <div class="trainers__container container">
             <h2>Тренеры</h2>
             <button class="trainers__button trainers__button--prev no-js" type="button" data-swiper-button>
-              <svg class="" width="18" height="34" viewBox="0 0 18 34" role="img">
+              <svg width="18" height="34" viewBox="0 0 18 34" role="img">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/sprite.svg#arrow"></use>
               </svg>
               <span class="visually-hidden">Предыдущий слайд.</span>
@@ -377,7 +377,7 @@
               </ul>
             </div>
             <button class="trainers__button trainers__button--next no-js" type="button" data-swiper-button>
-              <svg class="" width="18" height="34" viewBox="0 0 18 34" role="img">
+              <svg width="18" height="34" viewBox="0 0 18 34" role="img">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/sprite.svg#arrow"></use>
               </svg>
               <span class="visually-hidden">Следующий слайд.</span>
@@ -388,9 +388,9 @@
         <section class="advantages">
           <div class="advantages__container container">
             <h2>Наши преимущества</h2>
-            <ul class="advantages__list">
+            <div class="advantages__list">
               <div class="advantages__wrapper advantages__wrapper--top">
-                <li class="advantages__item">
+                <div class="advantages__item">
                   <div class="advantages__number advantages__number--corner">
                     <b>900</b>
                     <span>кв/м</span>
@@ -399,8 +399,8 @@
                     <h3>Площадь</h3>
                     <p>Занимайтесь без очередей и&nbsp;толпучки</p>
                   </div>
-                </li>
-                <li class="advantages__item">
+                </div>
+                <div class="advantages__item">
                   <div class="advantages__number">
                     <b>70</b>
                     <span>машин</span>
@@ -409,15 +409,15 @@
                     <h3>Собственная парковка</h3>
                     <p>Вы&nbsp;всегда найдете место для своей машины на&nbsp;нашей парковке</p>
                   </div>
-                </li>
+                </div>
               </div>
-              <li class="advantages__item advantages__item--extra">
+              <div class="advantages__item advantages__item--extra">
                 <b>100</b>
                 <h3>Тренажеров</h3>
                 <p>Современные тренажеры на&nbsp;все группы мышц</p>
-              </li>
+              </div>
               <div class="advantages__wrapper">
-                <li class="advantages__item">
+                <div class="advantages__item">
                   <div class="advantages__number">
                     <b>350</b>
                     <span>мест</span>
@@ -426,8 +426,8 @@
                     <h3>Комфорт</h3>
                     <p>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
                   </div>
-                </li>
-                <li class="advantages__item">
+                </div>
+                <div class="advantages__item">
                   <div class="advantages__number">
                     <b>5+</b>
                     <span>лет</span>
@@ -436,9 +436,9 @@
                     <h3>Тренерский опыт</h3>
                     <p>Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</p>
                   </div>
-                </li>
+                </div>
               </div>
-            </ul>
+            </div>
           </div>
         </section>
 
@@ -473,40 +473,61 @@
           </div>
         </section>
 
+        <section class="reviews">
+          <div class="reviews__container container">
+            <h2>Отзывы</h2>
+            <button class="reviews__button reviews__button--prev no-js" type="button" data-swiper-button>
+              <svg width="18" height="34" viewBox="0 0 18 34" role="img">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/sprite.svg#arrow"></use>
+              </svg>
+              <span class="visually-hidden">Предыдущий слайд.</span>
+            </button>
+            <div class="reviews__swiper swiper">
+              <ul class="reviews__list no-js swiper-wrapper">
+                <li class="reviews__item swiper-slide">
+                  <blockquote>
+                    <div class="reviews__image-wrapper">
+                      <img class="reviews__image" src="./img/review-avatar.png" srcset="./img/review-avatar@2x.png" width="80" height="80" loading="lazy" alt="Девушка в спортивной майке и с пучком на голове.">
+                    </div>
+                    <cite>Анна Орлова</cite>
+                    <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+                  </blockquote>
+                </li>
+                <li class="reviews__item swiper-slide">
+                  <blockquote>
+                    <div class="reviews__image-wrapper">
+                      <img class="reviews__image" src="./img/review-avatar.png" srcset="./img/review-avatar@2x.png" width="80" height="80" loading="lazy" alt="Девушка в спортивной майке и с пучком на голове.">
+                    </div>
+                    <cite>Анна Орлова</cite>
+                    <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+                  </blockquote>
+                </li>
+                <li class="reviews__item swiper-slide">
+                  <blockquote>
+                    <div class="reviews__image-wrapper">
+                      <img class="reviews__image" src="./img/review-avatar.png" srcset="./img/review-avatar@2x.png" width="80" height="80" loading="lazy" alt="Девушка в спортивной майке и с пучком на голове.">
+                    </div>
+                    <cite>Анна Орлова</cite>
+                    <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+                  </blockquote>
+                </li>
+              </ul>
+            </div>
+            <button class="reviews__button reviews__button--next no-js" type="button" data-swiper-button>
+              <svg width="18" height="34" viewBox="0 0 18 34" role="img">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/sprite.svg#arrow"></use>
+              </svg>
+              <span class="visually-hidden">Следующий слайд.</span>
+            </button>
+          </div>
+        </section>
+
       </main>
       <footer>
-        <div class="container"></div>
+        <div class="container">
+        </div>
       </footer>
     </div>
-
-    <!-- Модалки -->
-    <!-- <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div> -->
 
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
