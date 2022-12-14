@@ -4,7 +4,7 @@
 
 .advantages__container {
   padding-top: 146px;
-  padding-bottom: 91px;
+  padding-bottom: 87px;
 
   @include vp-1199 {
     padding-top: 91px;
@@ -233,6 +233,7 @@
 .advantages__number span {
   font-size: 14px;
   line-height: 21px;
+  text-transform: lowercase;
   color: $color-persian-blue;
 }
 

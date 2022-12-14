@@ -128,6 +128,7 @@
     max-height: 100%;
     height: 345px;
     padding-bottom: 50.8%;
+    overflow: hidden;
   }
 
   @include vp-767 {
@@ -148,11 +149,15 @@
   object-fit: cover;
 
   @include vp-1199 {
-    object-position: top;
+    transform: scale(1.13);
+    object-position: -38px 20px;
+    object-fit: fill;
   }
 
   @include vp-767 {
+    transform: none;
     object-position: 90%;
+    object-fit: cover;
   }
 }
 
