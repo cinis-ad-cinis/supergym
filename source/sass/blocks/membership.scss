@@ -2,18 +2,47 @@
   position: relative;
   background-color: $color-ghost-white;
 
-  &::after {
-    content: url("../img/weights.png");
+  &::before {
+    content: "";
     position: absolute;
+    width: 287px;
+    height: 500px;
     right: 0;
-    bottom: -158px;
+    bottom: -155px;
     z-index: 1;
+    background-image: url("../img/weights.png");
+    background-size: 287px 500px;
+    background-repeat: no-repeat;
+    background-position: contain;
+
+    @include retina {
+      background-image: url("../img/weights@2x.png");
+      background-size: 287px 500px;
+    }
   }
 
   @include vp-1199 {
+    &::before {
+      display: none;
+    }
+
     &::after {
-      content: url("../../img/weights-tablet.png");
-      bottom: -130px;
+      content: "";
+      position: absolute;
+      width: 347px;
+      height: 450px;
+      right: 0;
+      bottom: -125px;
+      z-index: 1;
+      background-image: url("../../img/weights-tablet.png");
+      background-size: 347px 450px;
+      background-repeat: no-repeat;
+      background-position: contain;
+
+      @include retina {
+        background-image: url("../../img/weights-tablet@2x.png");
+        background-size: 347px 450px;
+      }
     }
   }
 
