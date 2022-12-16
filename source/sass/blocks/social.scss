@@ -1,0 +1,32 @@
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  max-width: 120px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: $color-default-white;
+  border-radius: 50%;
+  transition: background $trans-default;
+
+  @include hover-focus {
+    background: $red-to-blue-diagon;
+
+    & .social__icon {
+      fill: $color-default-white;
+    }
+  }
+}
+
+.social__icon {
+  fill: $color-black-russian;
+}

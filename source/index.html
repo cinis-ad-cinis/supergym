@@ -57,7 +57,7 @@
         </div>
       </header>
 
-      <main>
+      <main class="main">
         <section class="about">
           <div class="about__container container">
             <div class="about__description">
@@ -522,9 +522,105 @@
           </div>
         </section>
 
+        <div class="main__wrapper">
+          <div class="container">
+            <section class="free-workout">
+              <h2>Бесплатное занятие</h2>
+              <form class="free-workout__form form" action="https://echo.htmlacademy.ru" method="post">
+                <p class="form__inputs">
+                  <label for="name" class="visually-hidden">Имя</label>
+                  <input type="text" name="name" id="name" placeholder="Имя" required>
+                  <label for="phone" class="visually-hidden">Телефон</label>
+                  <input type="tel" name="number" id="phone" placeholder="Телефон" maxlength="30" pattern="\+?[0-9\s\-\(\)]+" required>
+                </p>
+                <button type="submit">Отправить</button>
+              </form>
+            </section>
+
+            <section class="contacts">
+              <h2>Контакты</h2>
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <h3>Адрес:</h3>
+                  <a class="contacts__link" href="#">г. Омск, ул. 60 лет Октября, 7</a>
+                </li>
+                <li class="contacts__item contacts__item--phone">
+                  <h3>Телефон:</h3>
+                  <a class="contacts__link" href="tel:88005555555">8-800-555-55-55</a>
+                </li>
+                <li class="contacts__item contacts__item">
+                  <h3>График работы:</h3>
+                  <span>Пн-Вс: с 8:00 до 22:00</span>
+                </li>
+                <li class="contacts__item contacts__item--email">
+                  <h3>Email:</h3>
+                  <a class="contacts__link" href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
       </main>
-      <footer>
-        <div class="container">
+
+      <footer class="footer">
+        <div class="footer__container container">
+          <nav class="footer__nav nav">
+            <div class="footer__logo logo">
+              <a class="logo__link">
+                <svg class="logo__image logo__image--footer" width="88" height="32" viewBox="0 0 88 32" role="img">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/sprite.svg#logo"></use>
+                </svg>
+                <span class="visually-hidden">Логотип фитнес-центра Supergym.</span>
+              </a>
+            </div>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">Услуги</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Абонементы</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Акции</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Тренеры</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Расписание</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__icon" aria-hidden="true" focusable="false" width="13" height="8" viewBox="0 0 13 8" role="img">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/sprite.svg#icon-vk"></use>
+                  </svg>
+                  <span class="visually-hidden">Ссылка на профиль в социальной сети VKontakte.</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__icon" aria-hidden="true" focusable="false" width="10" height="17" viewBox="0 0 10 17" role="img">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/sprite.svg#icon-ok"></use>
+                  </svg>
+                  <span class="visually-hidden">Ссылка на профиль в социальной сети Одноклассники.</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__icon" aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 15 15" role="img">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/sprite.svg#icon-reddit"></use>
+                  </svg>
+                  <span class="visually-hidden">Ссылка на профиль в социальной сети Reddit.</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </footer>
     </div>

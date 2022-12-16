@@ -159,8 +159,7 @@
   transition: background-color $trans-default;
 
   @include hover-focus {
-    color: $color-saphire;
-    background-color: $color-default-white;
+    background-color: $color-night-rider-opacity;
   }
 
   @include vp-1199 {

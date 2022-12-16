@@ -30,6 +30,7 @@ $color-dark-gray:                   #afafaf;
 $color-dark-cerulean-opacity:       rgba(20, 54, 122, 0.5);
 $color-light-slate-gray:            #74819c;
 $color-black-russian:               #030a1a;
+$color-night-rider-opacity:         rgba(46, 46, 46, 0.69);
 
 // Gradient
 
@@ -43,6 +44,9 @@ $blue-to-red:                       linear-gradient(44.89deg, #003d85 25.38%, #b
 $red-to-blue-opacity:               linear-gradient(97.05deg, rgba(237, 2, 51, 0.2) 17.6%, rgba(0, 62, 183, 0.2) 95.31%);
 $red-to-blue-number:                linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
 $red-corner:                        linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
+$blue-to-left:                      linear-gradient(90deg, #102654 50%, #ffffff 50%);
+$blue-to-red-button:                linear-gradient(90.92deg, rgba(0, 57, 220, 0.69) 0%, rgba(237, 0, 67, 0.69) 100%);
+
 
 // Typography
 // ---------------------------------
