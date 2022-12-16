@@ -20,6 +20,10 @@
       transform: translate(-50%, -50%) scale(1.1);
     }
   }
+
+  &.no-js {
+    display: none;
+  }
 }
 
 .video__overlay {
@@ -42,37 +46,6 @@
     object-position: top;
   }
 }
-
-// .video__button {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   z-index: 1;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 72px;
-//   height: 72px;
-//   padding: 14px;
-//   border-radius: 50%;
-//   border: none;
-//   background: $blue-to-red;
-//   cursor: pointer;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     width: 17px;
-//     height: 17px;
-//     background-image: url("../img/sprite/button-play.svg");
-//     background-repeat: no-repeat;
-//     background-position: right;
-//   }
-// }
 
 .video__button {
   position: absolute;

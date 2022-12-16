@@ -33,6 +33,7 @@ const tabs = document.querySelectorAll('.membership__list');
 
 const setupVideo = (video) => {
   if (vid) {
+    video.classList.remove('no-js');
     let link = video.querySelector('.video__link');
     let button = video.querySelector('.video__button');
 
