@@ -99,6 +99,7 @@
 .membership__buttons {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   gap: 46px;
   margin-bottom: 51px;
 
@@ -113,6 +114,8 @@
   }
 
   @include vp-1199 {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     gap: 54px;
     margin-bottom: 58px;
   }
