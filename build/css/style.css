@@ -2080,6 +2080,17 @@ html {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.membership__button.focus-visible:focus {
+  color: #ed0233;
 }
 
 .membership__button--active {
@@ -2252,6 +2263,7 @@ html {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  gap: 25px;
   margin-bottom: 10px;
 }
 
@@ -2895,6 +2907,10 @@ html {
   color: #1c3374;
   text-transform: uppercase;
   border-bottom: 1px solid #1c3374;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
@@ -3147,8 +3163,13 @@ html {
   color: #ffffff;
 }
 
+.form input:hover {
+  border-color: #f8f9fc;
+}
+
 .form input:focus {
-  outline: none;
+  outline: 1px solid #f8f9fc;
+  outline-offset: 8px;
 }
 
 .form input:focus::-webkit-input-placeholder {
@@ -3253,6 +3274,9 @@ html {
 .contacts__link,
 .contacts span {
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 14px;
   line-height: 21px;
 }
@@ -4635,6 +4659,10 @@ html {
     -webkit-transform: translate(-50%, -50%) scale(1.1);
     -ms-transform: translate(-50%, -50%) scale(1.1);
     transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .membership__button:hover:not(.focus-visible) {
+    color: #ed0233;
   }
 
   .tab-card__button:hover:not(.focus-visible) {

@@ -173,6 +173,7 @@
   color: $color-resolution-blue;
   text-transform: uppercase;
   border-bottom: 1px solid $color-resolution-blue;
+  user-select: none;
   transition: color $trans-default;
 
   @include vp-767 {

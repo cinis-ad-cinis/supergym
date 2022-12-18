@@ -40,8 +40,13 @@
     color: $color-default-white;
   }
 
+  &:hover {
+    border-color: $color-ghost-white;
+  }
+
   &:focus {
-    outline: none;
+    outline: 1px solid $color-ghost-white;
+    outline-offset: 8px;
 
     &::placeholder {
       color: $color-light-slate-gray;

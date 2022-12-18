@@ -141,6 +141,12 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  user-select: none;
+  transition: color $trans-default;
+
+  @include hover-focus {
+    color: $color-torch-red;
+  }
 
   &--active {
     color: $color-saphire;

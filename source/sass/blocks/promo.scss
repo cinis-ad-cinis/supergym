@@ -43,6 +43,7 @@
 .promo__wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 25px;
   margin-bottom: 10px;
 
   @include vp-1199 {
