@@ -27,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const vid = document.querySelector('.video');
 const tabButtons = document.querySelectorAll('.membership__button');
+const tabsContainer = document.querySelector('.membership__tabs');
 const tabs = document.querySelectorAll('.membership__list');
 
 // Video
@@ -72,8 +73,13 @@ const setupVideo = (video) => {
 
 // Tabs
 
+if (tabsContainer) {
+  tabsContainer.classList.remove('no-js');
+}
+
 tabButtons.forEach((item) => {
   item.addEventListener('click', (evt) => {
+    evt.preventDefault();
     const id = evt.target.getAttribute('data-button');
     const currentTab = document.querySelector(`[data-tab='${id}']`);
 

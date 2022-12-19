@@ -94,13 +94,19 @@
         <section class="membership" id="membership">
           <div class="membership__container container">
             <h2>Абонементы</h2>
-            <div class="membership__buttons">
-              <button class="membership__button membership__button--active" type="button" data-button="1">1 месяц</button>
-              <button class="membership__button" type="button" data-button="6">6 месяцев</button>
-              <button class="membership__button" type="button" data-button="12">12 месяцев</button>
-            </div>
-            <div class="membership__tabs">
-              <ul class="membership__list membership__list--active" data-tab="1">
+            <ul class="membership__buttons">
+              <li class="membership__buttons-item">
+                <a class="membership__button membership__button--active" href="#month" data-button="1">1 месяц</a>
+              </li>
+              <li class="membership__buttons-item">
+                <a class="membership__button" href="#halfyear" data-button="6">6 месяцев</a>
+              </li>
+              <li class="membership__buttons-item">
+                <a class="membership__button" href="#year" data-button="12">12 месяцев</a>
+              </li>
+            </ul>
+            <div class="membership__tabs no-js">
+              <ul class="membership__list membership__list--active" id="month" data-tab="1">
                 <li class="membership__item tab-card">
                   <h3>С&nbsp;тренером</h3>
                   <span>12&nbsp;занятий</span>
@@ -129,7 +135,7 @@
                   <a href="#" class="tab-card__button">Купить абонемент</a>
                 </li>
               </ul>
-              <ul class="membership__list" data-tab="6">
+              <ul class="membership__list" id="halfyear" data-tab="6">
                 <li class="membership__item tab-card">
                   <h3>С тренером</h3>
                   <span>12&nbsp;занятий</span>
@@ -158,7 +164,7 @@
                   <a href="#" class="tab-card__button">Купить абонемент</a>
                 </li>
               </ul>
-              <ul class="membership__list" data-tab="12">
+              <ul class="membership__list" id="year" data-tab="12">
                 <li class="membership__item tab-card">
                   <h3>С тренером</h3>
                   <span>12&nbsp;занятий</span>
