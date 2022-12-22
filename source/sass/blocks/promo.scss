@@ -181,6 +181,7 @@
   @include vp-767 {
     width: 100%;
     min-height: 292px;
+    overflow: hidden;
   }
 }
 
@@ -192,6 +193,7 @@
   background-color: $color-saphire;
 
   @include vp-767 {
-    object-position: 27%;
+    transform: scale(1.17);
+    object-position: calc(50% + 4px) 20px;
   }
 }
