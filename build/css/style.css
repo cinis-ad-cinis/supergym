@@ -1741,6 +1741,16 @@ html {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .logo__image {
   display: block;
 }
