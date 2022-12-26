@@ -3419,11 +3419,8 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
   gap: 11px;
-  max-width: 120px;
+  max-width: 97px;
   margin: 0;
   padding: 0;
   padding-bottom: 10px;
