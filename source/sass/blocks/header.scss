@@ -26,6 +26,7 @@
 }
 
 .header__wrapper {
+  position: relative;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -37,8 +38,23 @@
 }
 
 .header__phone {
+  position: absolute;
+  right: 0;
+  z-index: 1;
   display: flex;
   flex-direction: column;
+  gap: 10px;
+
+  @include vp-1199 {
+    position: static;
+    max-width: 85%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
 }
 
 .header__link {
